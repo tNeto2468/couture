@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Couture Store - Os melhores tênis importados com estilo e exclusividade. Nike Air Force, Jordan, Dunk e mais.">
+  <meta name="keywords" content="tênis, sneakers, nike, jordan, dunk, importados, couture">
+  <title>Couture Store - Tênis Exclusivos e Importados</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Loader -->
+  <div id="loader">
+    <h1>COUTURE</h1>
+  </div>
+
+  <!-- Particles -->
+  <div id="particles-js"></div>
+
+  <!-- Success Message -->
+  <div class="success-message" id="successMessage">
+    ✓ Produto adicionado ao carrinho!
+  </div>
+
+  <!-- Modal Carrinho -->
+  <div class="modal-carrinho" id="modalCarrinho">
+    <div class="modal-content">
+      <span class="modal-close" onclick="fecharModal()">×</span>
+      <h2 style="color: var(--primary); margin-bottom: 30px;">🛒 Seu Carrinho</h2>
+      <div id="carrinhoItens"></div>
+      <div class="carrinho-total">
+        <h3>Total: <span id="carrinhoTotal">R$ 0,00</span></h3>
+      </div>
+      <div class="carrinho-actions">
+        <button class="btn-limpar" onclick="limparCarrinho()">Limpar Carrinho</button>
+        <button class="btn-finalizar" onclick="finalizarCompra()">Finalizar no WhatsApp</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="header">
+    <h1 onclick="window.scrollTo({top: 0, behavior: 'smooth'})">COUTURE</h1>
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#contato">Contato</a>
+      <div class="cart-icon" onclick="abrirCarrinho()">
+        🛒
+        <span class="cart-count" id="cartCount">0</span>
+      </div>
+    </nav>
+    <div class="mobile-menu" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <h2>Estilo e Exclusividade</h2>
+    <p>Os melhores tênis importados em um só lugar</p>
+    <a href="#produtos" class="btn">Ver Produtos</a>
+  </section>
+
+  <!-- Produtos -->
+  <section id="produtos" class="produtos">
+    <h2>Produtos em Destaque</h2>
+
+    <!-- Search Box -->
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Buscar tênis..." onkeyup="buscarProdutos()">
+    </div>
+
+    <!-- Filtros -->
+    <div class="filtros">
+      <button class="filtro-btn active" onclick="filtrarProdutos('todos')">Todos</button>
+      <button class="filtro-btn" onclick="filtrarProdutos('nike')">Nike</button>
+      <button class="filtro-btn" onclick="filtrarProdutos('jordan')">Jordan</button>
+      <button class="filtro-btn" onclick="filtrarProdutos('dunk')">Dunk</button>
+    </div>
+
+    <div class="produto-grid" id="produtoGrid">
+      <!-- TROQUE AS IMAGENS AQUI 👇 -->
+
+      <div class="produto-card" data-categoria="nike">
+        <img src="img/air-force.png" alt="Air Force 1">
+        <h3>Air Force 1</h3>
+        <p>R$ 699,00</p>
+        <button onclick="adicionarCarrinhoHTML('Air Force 1', 650)">Comprar</button>
+      </div>
+
+      <div class="produto-card" data-categoria="jordan">
+        <img src="img/jordan.png" alt="Air Jordan 1 Low">
+        <h3>Air Jordan 1 Low</h3>
+        <p>R$ 759,00</p>
+        <button onclick="adicionarCarrinhoHTML('Air Jordan 1 Low', 759)">Comprar</button>
+      </div>
+
+      <div class="produto-card" data-categoria="dunk">
+        <img
+          src="https://cdn.sanity.io/images/pu5wtzfc/production/b6f02bec982139ad1a93a62cf6c891544e19c588-2000x1250.jpg/2025-nike-dunk-low-syracuse-hf5441-106-1.jpg"
+          alt="Dunk Syracuse">
+        <h3>Dunk Syracuse</h3>
+        <p>R$ 779,00</p>
+        <button onclick="adicionarCarrinhoHTML('Dunk Syracuse', 779)">Comprar</button>
+      </div>
+
+      <div class="produto-card" data-categoria="dunk">
+        <img src="img/dunk-panda.png" alt="Dunk Panda">
+        <h3>Dunk Panda</h3>
+        <p>R$ 749,00</p>
+        <button onclick="adicionarCarrinhoHTML('Dunk Panda', 749)">Comprar</button>
+      </div>
+
+      <div class="produto-card" data-categoria="dunk">
+        <img src="img/dunk-blue.png" alt="Dunk University Blue">
+        <h3>Dunk University Blue</h3>
+        <p>R$ 749,00</p>
+        <button onclick="adicionarCarrinhoHTML('Dunk University Blue', 749)">Comprar</button>
+      </div>
+
+      <div class="produto-card" data-categoria="nike">
+        <img src="img/air-max.png" alt="Air Max 90">
+        <h3>Air Max 90</h3>
+        <p>R$ 699,00</p>
+        <button onclick="adicionarCarrinhoHTML('Air Max 90', 699)">Comprar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section class="depoimentos">
+    <h2>O que nossos clientes dizem</h2>
+    <div class="depoimentos-grid">
+      <div class="depoimento-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"Produto de qualidade excepcional! Chegou super rápido e exatamente como nas fotos. Recomendo!"</p>
+        <h4>Lucas Silva</h4>
+        <span>São Paulo, SP</span>
+      </div>
+      <div class="depoimento-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"Melhor loja de tênis importados! Atendimento nota 10 e produtos originais. Já comprei várias vezes!"</p>
+        <h4>Caroline Nunes</h4>
+        <span>São João dos Patos, MA</span>
+      </div>
+      <div class="depoimento-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"Sempre quis ter um Jordan original e consegui aqui com um preço justo. Entrega rápida demais!"</p>
+        <h4>Mariana Costa</h4>
+        <span>Rio de Janeiro, RJ</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="newsletter-container">
+      <h2>📬 Fique por dentro das novidades</h2>
+      <p>Receba ofertas exclusivas e lançamentos em primeira mão!</p>
+      <form class="newsletter-form" onsubmit="inscreverNewsletter(event)">
+        <input type="email" placeholder="Seu melhor e-mail" required>
+        <button type="submit">Inscrever-se</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="contato">
+    <h2>Entre em Contato</h2>
+    <p>Tire suas dúvidas ou faça seu pedido diretamente conosco</p>
+    <div class="contato-container">
+      <form class="contato-form" onsubmit="enviarContato(event)">
+        <input type="text" placeholder="Seu Nome" required>
+        <input type="email" placeholder="Seu E-mail" required>
+        <input type="tel" placeholder="Seu WhatsApp" required>
+        <textarea placeholder="Sua Mensagem" required></textarea>
+        <button type="submit">Enviar Mensagem</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Couture Store — Todos os direitos reservados.</p>
+    <p>Tênis importados de alta qualidade</p>
+    <div class="footer-social">
+      <a href="https://wa.me/5599985103084" target="_blank">📱</a>
+      <a href="https://www.instagram.com/couture_imports" target="_blank">📷</a>
+    </div>
+  </footer>
+
+  <!-- Botões Flutuantes -->
+  <div class="social-float">
+    <a href="https://wa.me/5599985103084" class="social-btn whatsapp" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+      <span class="tooltip">Fale conosco</span>
+    </a>
+    <a href="https://www.instagram.com/couture_imports" class="social-btn instagram" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+      <span class="tooltip">Siga no Instagram</span>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
