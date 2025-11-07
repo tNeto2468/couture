@@ -56,6 +56,7 @@ html {
     transform: scale(0.8);
     filter: blur(10px);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
@@ -228,6 +229,7 @@ nav a:hover {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -855,6 +857,7 @@ footer p {
     transform: translateX(400px);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
