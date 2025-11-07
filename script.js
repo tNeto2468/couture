@@ -1,11 +1,17 @@
 let carrinho = [];
 let produtos = [
-  { id: 1, nome: 'Air Force 1', preco: 650, categoria: 'nike', img: 'https://imgnike-a.akamaihd.net/360x360/01113751A2.jpg' },
-  { id: 2, nome: 'Air Jordan 1 Low', preco: 759, categoria: 'jordan', img: 'https://imgnike-a.akamaihd.net/360x360/05835751A1.jpg' },
-  { id: 3, nome: 'Dunk Syracuse', preco: 779, categoria: 'dunk', img: 'https://imgnike-a.akamaihd.net/768x768/09349456A1.jpg' },
-  { id: 4, nome: 'Dunk Panda', preco: 749, categoria: 'dunk', img: 'https://imgnike-a.akamaihd.net/360x360/017075IDA10.jpg' },
-  { id: 5, nome: 'Dunk University Blue', preco: 749, categoria: 'dunk', img: 'https://droper-lapse.us-southeast-1.linodeobjects.com/20241121141946213-475.webp' },
-  { id: 6, nome: 'Air Max 90', preco: 699, categoria: 'nike', img: 'https://imgnike-a.akamaihd.net/768x768/0093187TA2.jpg' }
+  { id: 1, nome: 'Air Force 1', preco: 650, categoria: 'nike', img: 'https://imgnike-a.akamaihd.net/768x768/011137ID.jpg' },
+  { id: 2, nome: 'Air Jordan 1 Low', preco: 759, categoria: 'nike', img: 'https://imgnike-a.akamaihd.net/768x768/05835751.jpg' },
+  { id: 3, nome: 'Dunk Syracuse', preco: 779, categoria: 'nike', img: 'https://imgnike-a.akamaihd.net/768x768/09349456.jpg' },
+  { id: 4, nome: 'Dunk Panda', preco: 749, categoria: 'nike', img: 'https://imgnike-a.akamaihd.net/768x768/017075ID.jpg' },
+  { id: 5, nome: 'Dunk University Blue', preco: 749, categoria: 'nike', img: 'https://droper-lapse.us-southeast-1.linodeobjects.com/20241121141946213-475.webp' },
+  { id: 6, nome: 'Air Max 90', preco: 699, categoria: 'nike', img: 'https://imgnike-a.akamaihd.net/768x768/0164077W.jpg' },
+  { id: 7, nome: 'Yezzy', preco: 899, categoria: 'Adidas', img: 'https://droper-media.us-southeast-1.linodeobjects.com/20102022203442956.webp' },
+  { id: 8, nome: 'Samba OG', preco: 599, categoria: 'Adidas', img: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT3a4ZnGpWvVWxuR6OTHamkIWacsFy1aZY7Lz3ETkm6TWIkU4vp25v-FZy9GXBsSnCJ8KHxUMuYL5F7kQW2VgZnHfTZ24KuC44Sexsx1jo_nuuaBgpLpB1L' },
+  { id: 9, nome: 'Campus', preco: 599, categoria: 'Adidas', img: 'https://droper-lapse.us-southeast-1.linodeobjects.com/20250714135730366-193.webp' },
+  { id: 10, nome: 'Air Max 90', preco: 699, categoria: 'Adidas', img: 'https://images.unsplash.com/photo-1543508282-6319a3e2621f?w=500' },
+  { id: 11, nome: 'Air Max 90', preco: 699, categoria: 'Adidas', img: 'https://images.unsplash.com/photo-1543508282-6319a3e2621f?w=500' },
+  { id: 12, nome: 'Air Max 90', preco: 699, categoria: 'Adidas', img: 'https://images.unsplash.com/photo-1543508282-6319a3e2621f?w=500' },
 ];
 
 // Renderizar produtos
